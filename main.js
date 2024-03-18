@@ -33,7 +33,7 @@ app.use((req,res,next)=>{
     res.locals.message = req.session.message
     delete req.session.message;
     next()
-})
+});
 
 app.use(express.static('uploads'));
 
@@ -42,8 +42,8 @@ app.set('view engine' , "ejs");
 
 //route prefix
 
-app.use(require('./routes/routes'))
+app.use(require('./routes/routes'));
 
 app.listen(PORT,()=>{
     console.log("Server listening");
-})
+});
