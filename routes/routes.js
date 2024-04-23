@@ -92,7 +92,6 @@ router.post('/update/:id', upload, async (req, res) => {
         email: req.body.email,
         phone: req.body.phone,
         image: newImg,
-
     });
 
 
